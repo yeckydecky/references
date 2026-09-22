@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline' data:">
+		<title>Zotero Report</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7Cgljb2xvci1zY2hlbWU6IGxpZ2h0IGRhcms7CgkvKiBUaGVzZSBzaG91bGQgYmUgdGhlIGRlZmF1bHRzLCBidXQganVzdCBpbiBjYXNlOiAqLwoJYmFja2dyb3VuZDogQ2FudmFzOwoJY29sb3I6IENhbnZhc1RleHQ7Cn0KCmEgewoJdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7Cn0KCmJvZHkgewoJcGFkZGluZzogMDsKfQoKdWwucmVwb3J0IGxpLml0ZW0gewoJYm9yZGVyLXRvcDogNHB4IHNvbGlkICM1NTU7CglwYWRkaW5nLXRvcDogMWVtOwoJcGFkZGluZy1sZWZ0OiAxZW07CglwYWRkaW5nLXJpZ2h0OiAxZW07CgltYXJnaW4tYm90dG9tOiAyZW07Cn0KCmgxLCBoMiwgaDMsIGg0LCBoNSwgaDYgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDIgewoJbWFyZ2luOiAwIDAgLjVlbTsKfQoKaDIucGFyZW50SXRlbSB7Cglmb250LXdlaWdodDogNjAwOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiA2MDAgIWltcG9ydGFudDsKCWZvbnQtc2l6ZTogMWVtOwoJZGlzcGxheTogYmxvY2s7Cn0KCi8qIE1ldGFkYXRhIHRhYmxlICovCnRoIHsKCXZlcnRpY2FsLWFsaWduOiB0b3A7Cgl0ZXh0LWFsaWduOiByaWdodDsKCXdpZHRoOiAxNSU7Cgl3aGl0ZS1zcGFjZTogbm93cmFwOwp9Cgp0ZCB7CglwYWRkaW5nLWxlZnQ6IC41ZW07Cn0KCgp1bC5yZXBvcnQsIHVsLm5vdGVzLCB1bC50YWdzIHsKCWxpc3Qtc3R5bGU6IG5vbmU7CgltYXJnaW4tbGVmdDogMDsKCXBhZGRpbmctbGVmdDogMDsKfQoKLyogVGFncyAqLwpoMy50YWdzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLnRhZ3MgewoJbGluZS1oZWlnaHQ6IDEuNzVlbTsKCWxpc3Qtc3R5bGU6IG5vbmU7Cn0KCnVsLnRhZ3MgbGkgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIG5vdGVzICovCmgzLm5vdGVzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLm5vdGVzIHsKCW1hcmdpbi1ib3R0b206IDEuMmVtOwp9Cgp1bC5ub3RlcyA+IGxpOmZpcnN0LWNoaWxkIHAgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSB7CglwYWRkaW5nOiAuN2VtIDA7Cn0KCnVsLm5vdGVzID4gbGk6bm90KDpsYXN0LWNoaWxkKSB7Cglib3JkZXItYm90dG9tOiAxcHggI2NjYyBzb2xpZDsKfQoKCnVsLm5vdGVzID4gbGkgcDpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9Cgp1bC5ub3RlcyA+IGxpIHA6bGFzdC1jaGlsZCB7CgltYXJnaW4tYm90dG9tOiAwOwp9CgovKiBBZGQgcXVvdGF0aW9uIG1hcmtzIGFyb3VuZCBibG9ja3F1b3RlICovCnVsLm5vdGVzID4gbGkgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6YmVmb3JlIHsKCWNvbnRlbnQ6ICfigJwnOwp9Cgp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpsYXN0LWNoaWxkOmFmdGVyLApsaS5ub3RlIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpsYXN0LWNoaWxkOmFmdGVyIHsKCWNvbnRlbnQ6ICfigJ0nOwp9CgovKiBQcmVzZXJ2ZSB3aGl0ZXNwYWNlIG9uIHBsYWludGV4dCBub3RlcyAqLwp1bC5ub3RlcyBsaSBwLnBsYWludGV4dCwgbGkubm90ZSBwLnBsYWludGV4dCwgZGl2Lm5vdGUgcC5wbGFpbnRleHQgewoJd2hpdGUtc3BhY2U6IHByZS13cmFwOwp9CgovKiBEaXNwbGF5IHRhZ3Mgd2l0aGluIGNoaWxkIG5vdGVzIGlubGluZSAqLwp1bC5ub3RlcyBoMy50YWdzIHsKCWRpc3BsYXk6IGlubGluZTsKCWZvbnQtc2l6ZTogMWVtOwp9Cgp1bC5ub3RlcyBoMy50YWdzOmFmdGVyIHsKCWNvbnRlbnQ6ICcgJzsKfQoKdWwubm90ZXMgdWwudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgbGk6bm90KDpsYXN0LWNoaWxkKTphZnRlciB7Cgljb250ZW50OiAnLCAnOwp9CgoKLyogQ2hpbGQgYXR0YWNobWVudHMgKi8KaDMuYXR0YWNobWVudHMgewoJZm9udC1zaXplOiAxLjFlbTsKfQoKdWwuYXR0YWNobWVudHMgbGkgewoJcGFkZGluZy10b3A6IC41ZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGRpdi5ub3RlIHsKCW1hcmdpbi1sZWZ0OiAyZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGRpdi5ub3RlIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogLjc1ZW07Cn0KCmRpdiB0YWJsZSB7Cglib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOwp9CgpkaXYgdGFibGUgdGQsIGRpdiB0YWJsZSB0aCB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKCXdvcmQtYnJlYWs6IGJyZWFrLWFsbDsKfQoKZGl2IHRhYmxlIHRkIHA6ZW1wdHk6OmFmdGVyLCBkaXYgdGFibGUgdGggcDplbXB0eTo6YWZ0ZXIgewoJY29udGVudDogIlwwMGEwIjsKfQoKZGl2IHRhYmxlIHRkICo6Zmlyc3QtY2hpbGQsIGRpdiB0YWJsZSB0aCAqOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IDA7Cn0KCmRpdiB0YWJsZSB0ZCAqOmxhc3QtY2hpbGQsIGRpdiB0YWJsZSB0aCAqOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQo=">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmFueS1saW5rIHsKCWNvbG9yOiAjOTAwOwp9CgphOmhvdmVyLCBhOmFjdGl2ZSB7Cgljb2xvcjogIzc3NzsKfQoKQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykgewoJYTphbnktbGluayB7CgkJY29sb3I6ICNmMDA7Cgl9CgoJYTpob3ZlciwgYTphY3RpdmUgewoJCWNvbG9yOiAjOTk5OwoJfQp9CgoKdWwucmVwb3J0IHsKCWZvbnQtc2l6ZTogMS40ZW07Cgl3aWR0aDogNjgwcHg7CgltYXJnaW46IDAgYXV0bzsKCXBhZGRpbmc6IDIwcHggMjBweDsKfQoKLyogTWV0YWRhdGEgdGFibGUgKi8KdGFibGUgewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCW92ZXJmbG93OiBhdXRvOwoJd2lkdGg6IDEwMCU7CgltYXJnaW46IC4xZW0gYXV0byAuNzVlbTsKCXBhZGRpbmc6IDAuNWVtOwp9Cg==">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiBpbmhlcml0OwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_E2226IDP" class="item journalArticle">
+			<h2>The Recent Past and Near Future of Risk and/or Need Assessment</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>D. A. Andrews</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>James Bonta</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>J. Stephen Wormith</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2006-01-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1177/0011128705281756">https://doi.org/10.1177/0011128705281756</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:39:53 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: SAGE Publications Inc</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>52</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>7-27</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Crime &amp; Delinquency</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1177/0011128705281756">10.1177/0011128705281756</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0011-1287</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:39:53 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:39:53 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_WR3FKVG7">SAGE PDF Full Text					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_YIAPLMCM" class="item journalArticle">
+			<h2>Machine Bias</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Julia Anguin</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jeff Larsen</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>There’s software used across the country to predict future criminals. And it’s biased against blacks.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>May 23, 2016</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>11/4/2023, 11:49:23 AM</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>ProPublica</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>11/4/2023, 11:49:23 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>11/26/2023, 1:43:56 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_X3X75Z7N">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_3YX8NQ3V" class="item journalArticle">
+			<h2>Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Alexandra Chouldechova</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Recidivism prediction instruments (RPIs) provide 
+decision-makers with an assessment of the likelihood that a criminal 
+defendant will reoffend at a future point in time. Although such 
+instruments are gaining increasing popularity across the country, their 
+use is attracting tremendous controversy. Much of the controversy 
+concerns potential discriminatory bias in the risk assessments that are 
+produced. This article discusses several fairness criteria that have 
+recently been applied to assess the fairness of RPIs. We demonstrate 
+that the criteria cannot all be simultaneously satisfied when recidivism
+ prevalence differs across groups. We then show how disparate impact can
+ arise when an RPI fails to satisfy the criterion of error rate balance.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2017-06-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Fair Prediction with Disparate Impact</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://journals.sagepub.com/action/showAbstract">https://journals.sagepub.com/action/showAbstract</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:41:22 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: SAGE Publications</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>153-163</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Big Data</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1089/big.2016.0047">10.1089/big.2016.0047</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>2</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>2167-6461</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:41:22 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:41:22 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_KBC9LRD6">Submitted Version					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_5MH242IZ" class="item journalArticle">
+			<h2>Use and Misuse of the Receiver Operating Characteristic Curve in Risk Prediction</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Nancy R. Cook</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The c statistic, or area under the receiver operating 
+characteristic (ROC) curve, achieved popularity in diagnostic testing, 
+in which the test characteristics of sensitivity and specificity are 
+relevant to discriminating diseased versus nondiseased patients. The c 
+statistic, however, may not be optimal in assessing models that predict 
+future risk or stratify individuals into risk categories. In this 
+setting, calibration is as important to the accurate assessment of risk.
+ For example, a biomarker with an odds ratio of 3 may have little effect
+ on the c statistic, yet an increased level could shift estimated 
+10-year cardiovascular risk for an individual patient from 8% to 24%, 
+which would lead to different treatment recommendations under current 
+Adult Treatment Panel III guidelines. Accepted risk factors such as 
+lipids, hypertension, and smoking have only marginal impact on the c 
+statistic individually yet lead to more accurate reclassification of 
+large proportions of patients into higher-risk or lower-risk categories.
+ Perfectly calibrated models for complex disease can, in fact, only 
+achieve values for the cstatistic well below the theoretical maximum of 
+1. Use of the c statistic for model selection could thus naively 
+eliminate established risk factors from cardiovascular risk prediction 
+scores. As novel risk factors are discovered, sole reliance on the c 
+statistic to evaluate their utility as risk predictors thus seems 
+ill-advised.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2007-02-20</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>ahajournals.org (Atypon)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.106.672402">https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.106.672402</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>9/20/2026, 2:05:02 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>115</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>American Heart Association</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>928-935</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Circulation</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1161/CIRCULATIONAHA.106.672402">10.1161/CIRCULATIONAHA.106.672402</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>7</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/20/2026, 2:05:02 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/20/2026, 2:05:02 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_KAWDLIFW">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_LUMT5WL8" class="item journalArticle">
+			<h2>Clinical Versus Actuarial Judgment</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Robyn M. Dawes</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>David Faust</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Paul E. Meehl</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>1989</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>243</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1668-1674</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Science, New Series</td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4899</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/17/2023, 3:47:49 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>11/26/2023, 1:45:49 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_7FN8W35Y">Dawes et al. - 1989 - Clinical Versus Actuarial Judgment.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_QB2DL43N" class="item journalArticle">
+			<h2>False Positives, False Negatives, and False Analyses: A Rejoinder to Machine Bias: There</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Anthony W. Flores</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Kristin Bechtel</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Christopher T. Lowenkamp</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2016</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>False Positives, False Negatives, and False Analyses</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>COinS</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Context Object: 
+ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.genre=article&amp;rft.atitle=False
+ Positives, False Negatives, and False Analyses: A Rejoinder to Machine 
+Bias: There</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>80</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Federal Probation</td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>2</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 3:58:55 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 3:59:51 PM</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_Y38LW5U6" class="item journalArticle">
+			<h2>Methodological advances in statistical prediction.</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Howard N. Garb</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>James M. Wood</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>12/2019</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>11/5/2023, 11:56:43 AM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>31</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1456-1466</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Psychological Assessment</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1037/pas0000673">10.1037/pas0000673</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>12</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Psychological Assessment</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1939-134X, 1040-3590</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>11/5/2023, 11:56:43 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>11/26/2023, 1:43:43 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_VLBMSFKN">Garb and Wood - 2019 - Methodological advances in statistical prediction..pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_UMAYK2RG" class="item journalArticle">
+			<h2>Race and Wrongful Convictions in the United States</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Samuel Gross</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Maurice Possley</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Klara Stephens</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2017-03-07</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>COinS</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://repository.law.umich.edu/other/122">https://repository.law.umich.edu/other/122</a></td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Other Publications</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>7/1/2026, 1:58:41 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>7/1/2026, 1:58:41 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_U7TCZ2XF">text/html Attachment					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_7GGJV9F2" class="item journalArticle">
+			<h2>Clinical versus mechanical prediction: A meta-analysis</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>William M. Grove</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>David H. Zald</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Boyd S. Lebow</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Beth E. Snitz</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Chad Nelson</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The process of making judgments and decisions requires a 
+method for combining data. To compare the accuracy of clinical and 
+mechanical (formal, statistical) data-combination techniques, we 
+performed a meta-analysis on studies of human health and behavior. On 
+average, mechanical-prediction techniques were about 10% more accurate 
+than clinical predictions. Depending on the specific analysis, 
+mechanical prediction substantially outperformed clinical prediction in 
+33%–47% of studies examined. Although clinical predictions were often as
+ accurate as mechanical predictions, in only a few studies (6%–16%) were
+ they substantially more accurate. Superiority for mechanical-prediction
+ techniques was consistent, regardless of the judgment task, type of 
+judges, judges' amounts of experience, or the types of data being 
+combined. Clinical predictions performed relatively less well when 
+predictors included clinical interview data. These data indicate that 
+mechanical predictions of human behaviors are equal or superior to 
+clinical prediction methods for a wide range of circumstances. (PsycInfo
+ Database Record (c) 2025 APA, all rights reserved)</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2000</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Clinical versus mechanical prediction</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>APA PsycNet</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Place: US
+Publisher: American Psychological Association</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>12</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>19-30</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Psychological Assessment</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1037/1040-3590.12.1.19">10.1037/1040-3590.12.1.19</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1939-134X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:11 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:11 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Health</li>
+					<li>Behavior</li>
+					<li>Statistical Measurement</li>
+					<li>Prediction</li>
+					<li>Clinical Judgment (Not Diagnosis)</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_ZTVDMVJA">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_DVGXU9IH" class="item journalArticle">
+			<h2>The accuracy of recidivism risk assessments for sexual offenders: A meta-analysis of 118 prediction studies</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>R. Karl Hanson</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Kelly E. Morton-Bourgon</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This review compared the accuracy of various approaches to the
+ prediction of recidivism among sexual offenders. On the basis of a 
+meta-analysis of 536 findings drawn from 118 distinct samples (45,398 
+sexual offenders, 16 countries), empirically derived actuarial measures 
+were more accurate than unstructured professional judgment for all 
+outcomes (sexual, violent, or any recidivism). The accuracy of 
+structured professional judgment was intermediate between the accuracy 
+found for the actuarial measures and for unstructured professional 
+judgment. The effect sizes for the actuarial measures were moderate to 
+large by conventional standards (average d values of 0.67–0.97); 
+however, the utility of the actuarial measures will vary according to 
+the referral question and samples assessed. Further research should 
+identify the psychologically meaningfully factors that contribute to 
+risk for reoffending. (PsycInfo Database Record (c) 2025 APA, all rights
+ reserved)</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2009</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>The accuracy of recidivism risk assessments for sexual offenders</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>APA PsycNet</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Place: US
+Publisher: American Psychological Association</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>21</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1-21</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Psychological Assessment</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1037/a0014421">10.1037/a0014421</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1939-134X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:07 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:07 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Judgment</li>
+					<li>Risk Assessment</li>
+					<li>Recidivism</li>
+					<li>Criminal Offenders</li>
+					<li>Sex Offenses</li>
+					<li>Sexual Offenders</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_LKPXYK2N">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FMI8WCV7" class="item journalArticle">
+			<h2>Risk as a Proxy for Race: The Dangers of Risk Assessment</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Bernard E. Harcourt</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2015</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Risk as a Proxy for Race</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>JSTOR</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://www.jstor.org/stable/10.1525/fsr.2015.27.4.237">https://www.jstor.org/stable/10.1525/fsr.2015.27.4.237</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>8/14/2026, 5:48:53 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: [University of California Press, Vera Institute of Justice]</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>27</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>237-243</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Federal Sentencing Reporter</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1525/fsr.2015.27.4.237">10.1525/fsr.2015.27.4.237</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1053-9867</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>8/14/2026, 5:48:53 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>8/14/2026, 5:48:53 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_V58BV3YR">JSTOR Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_5UKD6B5R" class="item conferencePaper">
+			<h2>Residual Unfairness in Fair Machine Learning from Prejudiced Data</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Nathan Kallus</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Angela Zhou</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Recent work in fairness in machine learning has proposed 
+adjusting for fairness by equalizing accuracy metrics across groups and 
+has also studied how datasets affected by historical prejudices may lead
+ to unfair decision policies. We connect these lines of work and study 
+the residual unfairness that arises when a fairness-adjusted predictor 
+is not actually fair on the target population due to systematic 
+censoring of training data by existing biased policies. This scenario is
+ particularly common in the same applications where fairness is a 
+concern. We characterize theoretically the impact of such censoring on 
+standard fairness metrics for binary classifiers and provide criteria 
+for when residual unfairness may or may not appear. We prove that, under
+ certain conditions, fairness-adjusted classifiers will in fact induce 
+residual unfairness that perpetuates the same injustices, against the 
+same groups, that biased the data to begin with, thus showing that even 
+state-of-the-art fair machine learning can have a "bias in, bias out" 
+property. When certain benchmark data is available, we show how sample 
+reweighting can estimate and adjust fairness metrics while accounting 
+for censoring. We use this to study the case of Stop, Question, and 
+Frisk (SQF) and demonstrate that attempting to adjust for fairness 
+perpetuates the same injustices that the policy is infamous for.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2018-07-03</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>proceedings.mlr.press</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://proceedings.mlr.press/v80/kallus18a.html">https://proceedings.mlr.press/v80/kallus18a.html</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:41:06 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>ISSN: 2640-3498</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>PMLR</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>2439-2448</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>Proceedings of the 35th International Conference on Machine Learning</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>International Conference on Machine Learning</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:41:06 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:41:06 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_7WTSK63P">Full Text PDF					</li>
+					<li id="item_LNPESRC8">Supplementary PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_KC42492E" class="item preprint">
+			<h2>Inherent Trade-Offs in the Fair Determination of Risk Scores</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jon Kleinberg</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Sendhil Mullainathan</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Manish Raghavan</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Recent discussion in the public sphere about algorithmic 
+classification has involved tension between competing notions of what it
+ means for a probabilistic classification to be fair to different 
+groups. We formalize three fairness conditions that lie at the heart of 
+these debates, and we prove that except in highly constrained special 
+cases, there is no method that can satisfy these three conditions 
+simultaneously. Moreover, even satisfying all three conditions 
+approximately requires that the data lie in an approximate version of 
+one of the constrained special cases identified by our theorem. These 
+results suggest some of the ways in which key notions of fairness are 
+incompatible with each other, and hence provide a framework for thinking
+ about the trade-offs between them.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2016-11-17</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1609.05807">http://arxiv.org/abs/1609.05807</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:41:15 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:1609.05807 [cs.LG]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.1609.05807">10.48550/arXiv.1609.05807</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:1609.05807</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:41:15 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:41:15 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Computers and Society</li>
+					<li>Computer Science - Machine Learning</li>
+					<li>Statistics - Machine Learning</li>
+				</ul>
+				<h3 class="notes">Notes:</h3>
+				<ul class="notes">
+					<li id="item_E7KGLZJ5">
+<p class="plaintext">Comment: To appear in Proceedings of Innovations in Theoretical Computer Science (ITCS), 2017</p>
+					</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_XCA2EMSD">Preprint PDF					</li>
+					<li id="item_BU7GWJN4">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_QSR4UJ27" class="item journalArticle">
+			<h2>How We Analyzed the COMPAS Recidivism Algorithm</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jeff Larsen</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Suya Mattu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Julia Anguin</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>ProPublica is an independent, non-profit newsroom that produces investigative journalism in the public interest.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>May 23, 2016</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>11/4/2023, 11:49:59 AM</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>ProPublica</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>11/4/2023, 11:49:59 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>11/26/2023, 1:43:52 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_2CISBC88">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_XKHHESFG" class="item book">
+			<h2>Clinical versus statistical prediction: A theoretical analysis and a review of the evidence</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Book</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Paul E. Meehl</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This monograph is an expansion of lectures given in the years 
+1947-1950 to graduate colloquia at the universities of Chicago, Iowa, 
+and Wisconsin, and of a lecture series delivered to staff and trainees 
+at the Veterans Administration Mental Hygiene Clinic at Ft. Snelling, 
+Minnesota. Perhaps a general remark in clarification of my own position 
+is in order. Students in my class in clinical psychology have often 
+reacted to the lectures on this topic as to a protective technique, 
+complaining that I was biased either for or against statistics (or the 
+clinician), depending mainly on where the student himself stood! This I 
+have, of course, found very reassuring. One clinical student suggested 
+that I tally the pro-con ratio for the list of honorific and derogatory 
+adjectives in Chapter 1 (page 4), and the reader will discover that this
+ unedited sample of my verbal behavior puts my bias squarely at the 
+midline. The style and sequence of the paper reflect my own ambivalence 
+and real puzzlement, and I have deliberately left the document in this 
+discursive form to retain the flavor of the mental conflict that besets 
+most of us who do clinical work but try to be scientists. I have read 
+and heard too many rapid-fire, once-over-lightly "resolutions" of this 
+controversy to aim at contributing another such. The thing is just not 
+that simple. I was therefore not surprised to discover that the same 
+sections which one reader finds obvious and over-elaborated, another 
+singles out as especially useful for his particular difficulties. My 
+thesis in a nutshell: "There is no convincing reason to assume that 
+explicitly formalized mathematical rules and the clinician's creativity 
+are equally suited for any given kind of task, or that their comparative
+ effectiveness is the same for different tasks. Current clinical 
+practice should be much more critically examined with this in mind than 
+it has been." (PsycInfo Database Record (c) 2025 APA, all rights 
+reserved)</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>1954</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Clinical versus statistical prediction</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>APA PsycNet</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>DOI: 10.1037/11281-000
+Pages: x, 149</td>
+					</tr>
+					<tr>
+					<th>Place</th>
+						<td>Minneapolis, MN, US</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>University of Minnesota Press</td>
+					</tr>
+					<tr>
+					<th>Series</th>
+						<td>Clinical versus statistical prediction: A theoretical analysis and a review of the evidence</td>
+					</tr>
+					<tr>
+					<th># of Pages</th>
+						<td>x, 149</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 5:10:24 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 5:10:24 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Statistics</li>
+					<li>Prediction</li>
+					<li>Clinical Psychology</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_IY6ZLK9H">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FB355D3H" class="item journalArticle">
+			<h2>The New Person-Specific Paradigm in Psychology</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Peter C.M. Molenaar</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Cynthia G. Campbell</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Most research methodology in the behavioral sciences employs 
+interindividual analyses, which provide information about the state of 
+affairs of the population. However, as shown by classical 
+mathematical-statistical theorems (the ergodic theorems), such analyses 
+do not provide information for, and cannot be applied at, the level of 
+the individual, except on rare occasions when the processes of interest 
+meet certain stringent conditions. When psychological processes violate 
+these conditions, the interindividual analyses that are now standardly 
+applied have to be replaced by analysis of intraindividual variation in 
+order to obtain valid results. Two illustrations involving analysis of 
+intraindividual variation of personality and emotional processes are 
+given.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2009-04-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1111/j.1467-8721.2009.01619.x">https://doi.org/10.1111/j.1467-8721.2009.01619.x</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>9/7/2026, 1:32:54 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>18</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>SAGE Publications Inc</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>112-117</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Current Directions in Psychological Science</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1111/j.1467-8721.2009.01619.x">10.1111/j.1467-8721.2009.01619.x</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>2</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Curr Dir Psychol Sci</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0963-7214</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/7/2026, 1:32:54 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/7/2026, 1:32:54 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_9U6VZLYI">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_6DDABAFH" class="item journalArticle">
+			<h2>The ecological fallacy</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Steven Piantadosi</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>David P. Byar</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Sylvan B. Green</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>1988/05</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>English (US)</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>pure.johnshopkins.edu</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://pure.johnshopkins.edu/en/publications/the-ecological-fallacy-6/">https://pure.johnshopkins.edu/en/publications/the-ecological-fallacy-6/</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>9/7/2026, 1:29:38 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>127</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>Oxford University Press</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>893-904</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>American journal of epidemiology</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1093/oxfordjournals.aje.a114892">10.1093/oxfordjournals.aje.a114892</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>American journal of epidemiology</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0002-9262</td>
+					</tr>
+					<tr>
+					<th>PMID</th>
+						<td>3282433</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/7/2026, 1:29:38 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/7/2026, 1:29:38 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_VITBZ8UG">PubMed entry					</li>
+					<li id="item_HUSS8XXI">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_A8LI8BY6" class="item journalArticle">
+			<h2>Comparing Effect Sizes in Follow-Up Studies: ROC Area, Cohen's d, and r</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Marnie E. Rice</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Grant T. Harris</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>In order to facilitate comparisons across follow-up studies 
+that have used different measures of effect size, we provide a table of 
+effect size equivalencies for the three most common measures: ROC area 
+(AUC), Cohen's d, and r. We outline why AUC is the preferred measure of 
+predictive or diagnostic accuracy in forensic psychology or psychiatry, 
+and we urge researchers and practitioners to use numbers rather than 
+verbal labels to characterize effect sizes.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2005-10-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Comparing Effect Sizes in Follow-Up Studies</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Springer Link</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1007/s10979-005-6832-7">https://doi.org/10.1007/s10979-005-6832-7</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:40:29 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>29</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>615-620</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Law and Human Behavior</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1007/s10979-005-6832-7">10.1007/s10979-005-6832-7</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Law Hum Behav</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1573-661X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:29 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:29 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>risk assessment</li>
+					<li>effect size</li>
+					<li>predictive accuracy</li>
+					<li>ROC area</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_5QG3NIQG">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_YHCCE3VV" class="item journalArticle">
+			<h2>Constructing Actuarial Devices for Predicting Recidivism: A Comparison of Methods</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>ERIC SILVER</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>WILLIAM R. SMITH</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>STEVEN BANKS</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>A recent contribution to the prediction literature by Steadman
+ et al. features a novel “iterative classification” procedure for 
+constructing risk screening devices. In this article, the authors apply 
+the iterative classification procedure to a large recidivism data set, 
+across a range of recidivism outcomes and cross-validation conditions. 
+The purpose of this study is to assess the generalizability of the 
+iterative classification procedure and to draw comparisons with more 
+traditional methods of device construction. Results show the iterative 
+classification procedure to outperform other standard device 
+construction procedures in terms of the percentage of cases classified 
+as high or low risk but not to outperform more traditional device 
+construction procedures on a variety of other performance measures. 
+Implications for future research on the construction and evaluation of 
+risk screening devices are discussed.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2000-12-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Constructing Actuarial Devices for Predicting Recidivism</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1177/0093854800027006004">https://doi.org/10.1177/0093854800027006004</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:40:36 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: SAGE Publications Inc</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>27</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>733-764</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Criminal Justice and Behavior</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1177/0093854800027006004">10.1177/0093854800027006004</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>6</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0093-8548</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:36 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:36 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_QLLBZ54L">SAGE PDF Full Text					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_D3CWM33M" class="item journalArticle">
+			<h2>Predictive Validity Performance Indicators in Violence Risk Assessment: A Methodological Primer</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jay P. Singh</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The predictive validity of violence risk assessments can be 
+divided into two components: calibration and discrimination. The most 
+common performance indicator used to measure the predictive validity of 
+structured risk assessments, the area under the receiver operating 
+characteristic curve (AUC), measures the latter component but not the 
+former. As it does not capture how well a risk assessment tool's 
+predictions of risk agree with actual observed risk, the AUC provides an
+ incomplete portrayal of predictive validity. This primer provides an 
+overview of calibration and discrimination performance indicators that 
+measure global performance, performance in identifying higher-risk 
+groups, and performance in identifying lower-risk groups. It is 
+recommended that future research into the predictive validity of 
+violence risk assessment tools includes a number of performance 
+indicators that measure different facets of predictive validity and that
+ the limitations of reported indicators be routinely explicated. 
+Copyright © 2013 John Wiley &amp; Sons, Ltd.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2013</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Predictive Validity Performance Indicators in Violence Risk Assessment</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Wiley Online Library</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/bsl.2052">https://onlinelibrary.wiley.com/doi/abs/10.1002/bsl.2052</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:40:21 PM</td>
+					</tr>
+					<tr>
+					<th>License</th>
+						<td>Copyright © 2013 John Wiley &amp; Sons, Ltd.</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/bsl.2052</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>31</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>8-22</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Behavioral Sciences &amp; the Law</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1002/bsl.2052">10.1002/bsl.2052</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1099-0798</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:21 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:21 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_6CGV5D7U">Full Text PDF					</li>
+					<li id="item_WHJ8ZX8Y">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_JQWZWJ8H" class="item journalArticle">
+			<h2>A comparative study of violence risk assessment tools: A 
+systematic review and metaregression analysis of 68 studies involving 
+25,980 participants</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jay P. Singh</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Martin Grann</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Seena Fazel</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>There are a large number of structured instruments that assist
+ in the assessment of antisocial, violent and sexual risk, and their use
+ appears to be increasing in mental health and criminal justice 
+settings. However, little is known about which commonly used instruments
+ produce the highest rates of predictive validity, and whether overall 
+rates of predictive validity differ by gender, ethnicity, outcome, and 
+other study characteristics. We undertook a systematic review and 
+meta-analysis of nine commonly used risk assessment instruments 
+following PRISMA guidelines. We collected data from 68 studies based on 
+25,980 participants in 88 independent samples. For 54 of the samples, 
+new tabular data was provided directly by authors. We used four outcome 
+statistics to assess rates of predictive validity, and analyzed sources 
+of heterogeneity using subgroup analysis and metaregression. A tool 
+designed to detect violence risk in juveniles, the Structured Assessment
+ of Violence Risk in Youth (SAVRY), produced the highest rates of 
+predictive validity, while an instrument used to identify adults at risk
+ for general offending, the Level of Service Inventory – Revised 
+(LSI-R), and a personality scale commonly used for the purposes of risk 
+assessment, the Psychopathy Checklist – Revised (PCL-R), produced the 
+lowest. Instruments produced higher rates of predictive validity in 
+older and in predominantly White samples. Risk assessment procedures and
+ guidelines by mental health services and criminal justice systems may 
+need review in light of these findings.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2011-04-01</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>A comparative study of violence risk assessment tools</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>ScienceDirect</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://www.sciencedirect.com/science/article/pii/S0272735810001947">https://www.sciencedirect.com/science/article/pii/S0272735810001947</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:40:44 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>31</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>499-513</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Clinical Psychology Review</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1016/j.cpr.2010.11.009">10.1016/j.cpr.2010.11.009</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>3</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Clinical Psychology Review</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0272-7358</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:44 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:44 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Violence</li>
+					<li>Crime</li>
+					<li>Meta-analysis</li>
+					<li>Risk assessment</li>
+					<li>Area under curve</li>
+					<li>Forensic</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_ZTVS4Q8Q">ScienceDirect Full Text PDF					</li>
+					<li id="item_IZZ7QQSG">ScienceDirect Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_VWVRN7AW" class="item journalArticle">
+			<h2>RISK, RACE, AND RECIDIVISM: PREDICTIVE BIAS AND DISPARATE IMPACT*</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jennifer L. Skeem</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Christopher T. Lowenkamp</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>One way to unwind mass incarceration without compromising 
+public safety is to use risk assessment instruments in sentencing and 
+corrections. Although these instruments figure prominently in current 
+r...</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2016/11/01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>RISK, RACE, AND RECIDIVISM</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>onlinelibrary.wiley.com</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://onlinelibrary.wiley.com/doi/10.1111/1745-9125.12123">https://onlinelibrary.wiley.com/doi/10.1111/1745-9125.12123</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 2:40:16 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: John Wiley &amp; Sons, Ltd</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>54</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>680-712</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Criminology</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1111/1745-9125.12123">10.1111/1745-9125.12123</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1745-9125</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:16 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:16 PM</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_ITX4NBYQ" class="item journalArticle">
+			<h2>Gender, risk assessment, and sanctioning: The cost of treating women like men</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jennifer Skeem</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>John Monahan</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Christopher Lowenkamp</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Increasingly, jurisdictions across the United States are using
+ risk assessment instruments to scaffold efforts to unwind mass 
+incarceration without compromising public safety. Despite promising 
+results, critics oppose the use of these instruments to inform 
+sentencing and correctional decisions. One argument is that the use of 
+instruments that include gender as a risk factor will discriminate 
+against men in sanctioning. On the basis of a sample of 14,310 federal 
+offenders, we empirically test the predictive fairness of an instrument 
+that omits gender, the Post Conviction Risk Assessment (PCRA). We found 
+that the PCRA strongly predicts arrests for both genders, but 
+overestimates women’s likelihood of recidivism. For a given PCRA score, 
+the predicted probability of arrest, which is based on combining both 
+genders, is too high for women. Although gender neutrality is an 
+obviously appealing concept, it may translate into instrument bias and 
+overly harsh sanctions for women. With respect to the moral question of 
+disparate impact, we found that women obtain slightly lower mean scores 
+on the PCRA than men (d = .32, 99% CI = .29−.35, or 87% overlap in 
+scores); this difference is wholly attributable to men’s greater 
+criminal history, a factor already embedded in sentencing guidelines. 
+(PsycInfo Database Record (c) 2025 APA, all rights reserved)</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2016</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Gender, risk assessment, and sanctioning</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>APA PsycNet</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Place: US
+Publisher: Educational Publishing Foundation</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>40</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>580-593</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Law and Human Behavior</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1037/lhb0000206">10.1037/lhb0000206</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1573-661X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 2:40:26 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 2:40:26 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Decision Making</li>
+					<li>Human Sex Differences</li>
+					<li>Risk Assessment</li>
+					<li>Recidivism</li>
+					<li>Adjudication</li>
+					<li>Incarceration</li>
+					<li>Criminal Conviction</li>
+					<li>Test Bias</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_6MLW7L65">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_MFBQ46ZW" class="item journalArticle">
+			<h2>The Logic of Microaggressions Assumes a Racist Society</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Moin Syed</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This commentary draws attention to core assumptions about the 
+nature of society that underlie the current debate on microaggressions. 
+For proponents of microaggression research, the starting assumption is 
+one of a racist society. That is, microaggressions have their source and
+ power within an inequitable, racially stratified society. In contrast, 
+critics of microaggressions begin with the assumption of an equitable 
+society, or at least would not endorse the assumption of a racist 
+society. These two different starting assumptions lead to dramatically 
+different conclusions about the concept of microaggressions. As long as 
+these assumptions are not explicitly recognized, debates on methods, 
+findings, and so on will never be reconciled.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2021-09-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1177/1745691621994263">https://doi.org/10.1177/1745691621994263</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>6/26/2026, 4:28:48 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: SAGE Publications Inc</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>16</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>926-931</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Perspectives on Psychological Science</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1177/1745691621994263">10.1177/1745691621994263</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Perspect Psychol Sci</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1745-6916</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>6/26/2026, 4:28:48 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>6/26/2026, 4:28:48 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_DEFVEBNS">SAGE PDF Full Text					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_CZZE4T64" class="item journalArticle">
+			<h2>The Logic of Microaggressions Assumes a Racist Society</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Moin Syed</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This commentary draws attention to core assumptions about the 
+nature of society that underlie the current debate on microaggressions. 
+For proponents of microaggression research, the starting assumption is 
+one of a racist society. That is, microaggressions have their source and
+ power within an inequitable, racially stratified society. In contrast, 
+critics of microaggressions begin with the assumption of an equitable 
+society, or at least would not endorse the assumption of a racist 
+society. These two different starting assumptions lead to dramatically 
+different conclusions about the concept of microaggressions. As long as 
+these assumptions are not explicitly recognized, debates on methods, 
+findings, and so on will never be reconciled.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2021-09-01</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>EN</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>SAGE Journals</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1177/1745691621994263">https://doi.org/10.1177/1745691621994263</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>9/21/2026, 7:52:05 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>16</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>SAGE Publications Inc</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>926-931</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Perspectives on Psychological Science</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1177/1745691621994263">10.1177/1745691621994263</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Perspect Psychol Sci</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1745-6916</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/21/2026, 7:52:05 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/21/2026, 7:52:05 PM</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_LRFGNM6X" class="item journalArticle">
+			<h2>Officials' Estimates of the Incidence of “Actual Innocence” Convictions</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Marvin Zalman</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Brad Smith</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Angie Kiger</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Evidence indicates that the conviction and imprisonment of 
+factually innocent persons occur with some regularity. Most research 
+focuses on causes, but the incidence of wrongful convictions is an 
+important scientific and policy issue, especially as no official body 
+gathers data on miscarriages of justice. Two methods are available for 
+discovering the incidence of wrongful conviction: (1) enumerating 
+specific cases and (2) having criminal justice experts estimate its 
+incidence. Counts or catalogues of wrongful conviction necessarily 
+undercount its incidence and are subject to accuracy challenges. We 
+surveyed Michigan criminal justice officials, replicating a recent Ohio 
+survey, to obtain an expert estimate of the incidence of wrongful 
+conviction. All groups combined estimated that wrongful convictions 
+occurred at a rate of less than ½ percent in their own jurisdiction and 
+at a rate of 1–3 percent in the United States. Defense lawyers estimate 
+higher rates of wrongful conviction than judges, who estimate higher 
+rates than police officials and prosecutors. These differences may be 
+explained by professional socialization. An overall wrongful conviction 
+estimate of ½ percent extrapolates to about 5,000 wrongful felony 
+convictions and the imprisonment of more than 2,000 innocent persons in 
+the United States every year.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2008-03-01</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Taylor and Francis+NEJM</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1080/07418820801954563">https://doi.org/10.1080/07418820801954563</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>7/1/2026, 2:01:09 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Publisher: Routledge
+_eprint: https://doi.org/10.1080/07418820801954563</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>25</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>72-100</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Justice Quarterly</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1080/07418820801954563">10.1080/07418820801954563</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0741-8825</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>7/1/2026, 2:01:09 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>7/1/2026, 2:01:09 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>actual innocence</li>
+					<li>convictions</li>
+					<li>estimates</li>
+					<li>incidence</li>
+					<li>officials</li>
+					<li>wrongful conviction</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_HF38S7PV">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_5EBII62R" class="item webpage">
+			<h2>National Registry of Exonerations</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Web Page</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://exonerationregistry.org/">https://exonerationregistry.org/</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>9/7/2026, 2:38:41 PM</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/7/2026, 2:38:41 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/7/2026, 2:38:51 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_BMBJSCAW">Home | National Registry of Exonerations					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FT2UBADE" class="item book">
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Book</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>9/20/2026, 1:08:07 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>9/20/2026, 1:08:07 PM</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+		</ul>
+	
+</body></html>
